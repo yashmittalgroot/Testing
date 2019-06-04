@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>EJS View Test</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <h1><%= topic %></h1>
+    <!-- <h1><%= status %></h1> -->
+    
+    
+    <h3>
+    <%= status %>
+    <% if(status == 0){ %>
+        Not Started
+    <% } else if(status == 1){ %>
+        Going on
+    <% } else {%>
+        Done
+    <% } %>
+    </h3>
+
+    <% fruits.forEach(function(fruit){%>
+        <h4><%= fruit %></h4>
+        <%})%>
+
+    <h5>
+        <%= error.code %>
+        <%= error.msg %>
+    </h5>
+</body>
+</html>
